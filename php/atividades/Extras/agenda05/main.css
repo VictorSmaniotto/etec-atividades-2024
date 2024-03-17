@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  /* centralizando o body e ajustando a disposição dos itens em coluna */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+
+  & header {
+    max-width: 450px;
+    width: 450px;
+    padding: 10px 0;
+    background-color: #2196f3;
+    margin: 0.5rem 0;
+
+    & h2 {
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  & table {
+    max-width: 450px;
+    width: 450px;
+    border-collapse: collapse; /*Atributo para tirar a separação das bordas*/
+
+    & thead {
+      background-color: #2196f3;
+
+      & th {
+        color: white;
+        font-size: 12px;
+        padding: 10px;
+      }
+    }
+
+    & tbody {
+      & tr:nth-child(odd) {
+        background-color: #f2f2f2;
+        /*Coloquei esse bloco para deixar com o efeito stripped, preenche a cor nas linhas ímpares*/
+      }
+      & td {
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+}
