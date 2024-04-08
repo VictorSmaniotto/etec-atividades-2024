@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -45,6 +46,40 @@ body {
       }
     }
 
+    & .form-group-row {
+      display: flex;
+      flex-direction: row;
+      row-gap: 10px;
+      align-items: center;
+      justify-content: center;
+
+      & label {
+        margin-top: 10px;
+        padding: 15px;
+      }
+
+      & input,
+      select,
+      button {
+        max-width: 200px;
+        border-radius: 5px;
+        padding: 5px;
+      }
+
+      & button {
+        width: 100px;
+        background-color: #12d812;
+        color: white;
+        font-weight: 600;
+        margin-left: 1rem;
+        padding: 5px 15px;
+      }
+
+      & button:hover {
+        background-color: green;
+      }
+    }
+
     & .form-group-button {
       display: flex;
       flex-direction: column;
@@ -77,6 +112,10 @@ body {
     font-size: 1.5rem;
     font-weight: 400;
     text-decoration: underline red;
+  }
+
+  & .mt-3 {
+    margin-top: 5rem;
   }
 }
 
