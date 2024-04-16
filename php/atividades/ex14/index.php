@@ -34,6 +34,7 @@ $produto = isset($_GET['produto']) ? $_GET['produto'] : null;
 function retornaCategoriaProduto($produtos, $produto)
 {
     if (!empty($produtos[$produto])) {
+
         switch ($produto) {
             case 1:
                 return 'Alimento não-perecível';
@@ -59,8 +60,6 @@ function retornaCategoriaProduto($produtos, $produto)
                 return 'Código Inválido';
                 break;
         }
-    } else {
-        return 'Código Inválido';
     }
 }
 

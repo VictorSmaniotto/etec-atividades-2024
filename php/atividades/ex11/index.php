@@ -6,7 +6,7 @@ $altura = isset($_GET['altura']) ? floatval($_GET['altura']) : null;
 $imc = 0;
 $mensagem = '';
 
-function calcularIMC($peso, $altura)
+function calcularIMC($peso, $altura, $imc)
 {
     if (isset($peso, $altura)) {
         $imc =  number_format($peso / ($altura ^ 2));
@@ -69,7 +69,7 @@ function calcularIMC($peso, $altura)
 
     <h2 class="resultado mt-3">
         Seu IMC:
-        <? calcularIMC($peso, $altura) ?>
+        <? calcularIMC($peso, $altura, $imc) ?>
     </h2>
 
 </body>
