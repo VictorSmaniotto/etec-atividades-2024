@@ -6,7 +6,7 @@ $ano = isset($_GET["ano"]) ? $_GET["ano"] : null;
 
 $resultado = '';
 
-if (isset($ano) && is_numeric($ano) && date('L', strtotime("$ano-01-01")) == 1) {
+if (!empty($ano) && is_numeric($ano) && date('L', strtotime("$ano-01-01")) == 1) {
     $resultado = "$ano é bissexto";
 } else {
     $resultado = "$ano não é bissexto";

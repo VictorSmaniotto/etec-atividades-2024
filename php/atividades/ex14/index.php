@@ -29,7 +29,7 @@ $produtos = array(
     15 => "Vassoura"
 );
 
-$produto = isset($_GET['produto']) ? $_GET['produto'] : null;
+$produto = isset($_GET['produto']) ? (int) $_GET['produto'] : null;
 
 function retornaCategoriaProduto($produtos, $produto)
 {

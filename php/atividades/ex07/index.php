@@ -2,7 +2,7 @@
 
 <?php
 
-$idade = isset($_GET['idade']) ? intval($_GET['idade']) : null;
+$idade = isset($_GET['idade']) ? $_GET['idade'] : 0;
 
 
 function classificarIdade($idade)
@@ -18,8 +18,6 @@ function classificarIdade($idade)
             default:
                 return "Idade inválida";
         }
-    } else {
-        return "Idade inválida";
     }
 }
 

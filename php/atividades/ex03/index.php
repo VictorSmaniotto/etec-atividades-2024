@@ -56,12 +56,13 @@ if (isset($formaEsc) && isset($formaPgto[$formaEsc])) {
 
             <select name="formaPg" id="formaPg">
                 <option value="">Selecione</option>
-                <option value="Cartão de Crédito" <?= $_POST['formaPg'] == "Cartão de Crédito" ? 'selected' : '' ?>>
+                <option value="Cartão de Crédito" <?= isset($_POST['formaPg']) == "Cartão de Crédito" ? 'selected' : '' ?>>
                     Cartão de Crédito</option>
-                <option value="Cartão de Débito" <?= $_POST['formaPg'] == "Cartão de Débito" ? 'selected' : '' ?>>Cartão
+                <option value="Cartão de Débito" <?= isset($_POST['formaPg']) == "Cartão de Débito" ? 'selected' : '' ?>>Cartão
                     de Débito</option>
-                <option value="PIX" <?= $_POST['formaPg'] == "PIX" ? 'selected' : '' ?>>PIX</option>
-                <option value="Dinheiro" <?= $_POST['formaPg'] == "Dinheiro" ? 'selected' : '' ?>>Dinheiro</option>
+                <option value="PIX" <?= isset($_POST['formaPg']) == "PIX" ? 'selected' : '' ?>>PIX</option>
+                <option value="Dinheiro" <?= isset($_POST['formaPg']) == "Dinheiro" ? 'selected' : '' ?>>Dinheiro
+                </option>
             </select>
 
             <button type="submit">Calcular</button>

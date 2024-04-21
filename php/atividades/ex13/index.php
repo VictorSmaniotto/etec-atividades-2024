@@ -8,12 +8,12 @@
     De 21 a 25 Profissional
 */
 
-$idade = isset($_GET["idade"]) ? is_numeric($_GET["idade"]) : null;
+$idade = isset($_GET["idade"]) ? (int) $_GET["idade"] : null;
 
 function classificaAtleta($idade)
 {
     if (!empty($idade)) {
-        switch ($idade) {
+        switch (true) {
             case $idade >= 5 && $idade <= 10:
                 return "Infantil";
             case $idade > 10 && $idade <= 15:
@@ -47,7 +47,7 @@ function classificaAtleta($idade)
     <form action="#" method="get">
         <div class="form-group">
             <label for="idade">Informe a Idade</label>
-            <input type="text" name="idade" id="idade">
+            <input type="text" name="idade" id="idade" maxlength="2">
             <button type="submit">Classificar</button>
         </div>
     </form>

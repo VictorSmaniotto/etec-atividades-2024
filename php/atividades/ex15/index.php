@@ -21,8 +21,8 @@ $produtos = array(
 
 );
 
-$codigo = isset($_GET['codigo']) ? $_GET['codigo'] : null;
-$quantidade = isset($_GET['qtd']) ? $_GET['qtd'] : null;
+$codigo = isset($_GET['codigo']) ? (int) $_GET['codigo'] : null;
+$quantidade = isset($_GET['qtd']) ? (int) $_GET['qtd'] : null;
 $resultado = 0;
 
 function retornaProduto($codigo, $quantidade, $produtos)
